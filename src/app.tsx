@@ -1,7 +1,12 @@
-import * as ReactDOM from 'react-dom';
-import AppJS from './AppJS';
-function render() {
-  ReactDOM.render(AppJS(), document.body);
+import React from 'react'
+import Header from './components/header'
+const App = () => {
+  return (
+    <>
+      <Header/>
+      
+    </>
+  )
 }
 
-render();
+export default App

@@ -17,12 +17,21 @@ const createWindow = (): void => {
     width: 800,
     webPreferences: {
       preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
+      nodeIntegration: true
     },
+    // titleBarStyle: 'hidden',
+    // titleBarOverlay: {
+    //   color: '#2f3241',
+    //   symbolColor: '#74b1be',
+    //   height: 60
+    // },
+    backgroundColor: '#FFF',
+    autoHideMenuBar: true,
+    frame: false,
   });
   // mainWindow.removeMenu()
   // and load the index.html of the app.
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
-
   // Open the DevTools.
   // mainWindow.webContents.openDevTools();
 };
